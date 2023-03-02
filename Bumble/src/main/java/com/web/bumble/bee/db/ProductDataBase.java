@@ -114,4 +114,21 @@ public class ProductDataBase {
 		 return product;
 	 
  }
+	
+public static boolean updateProduct(Product product) throws ClassNotFoundException, SQLException {
+	DbConnector connector =new DbConnectorSQL();
+	Connection connection = connector.getConnection();
+	String query = "UPDATE product SET productname=?,productprice=?,productdescription=?,quantity=? WHERE productid=?";
+	PreparedStatement ps = connection.prepareStatement(query);
+	ps.setString(1, product.getProductname());
+	ps.setDouble(2, product.getPrice());
+	ps.setString(3, product.getProdcutdescription());
+	ps.setInt(4, product.getQuantity());
+	ps.setInt(5, product.getProductid());
+	boolean result = ps.executeUpdate() > 0 ;
+	ps.close();
+	connection.close();
+	return result;
+	
+}
 }

@@ -51,9 +51,9 @@
 <input type="text" placeholder="Product Description" name="productdescription" required class="txt_input" value="${product.getProdcutdescription()}" required><br>
 <input type="number" placeholder="Product Price" name="price" required min="1" class="txt_input" value="${product.getPrice()}" required><br>
 <input type="number" placeholder="Product Quantity" name="quantity" required min="1" class="txt_input" value="${product.getQuantity()}" required><br>
-<input type="hidden" name="action" value="updateAccount">
+<input type="hidden" name="action" value="updatedproduct">
+<input type="hidden" name="pid" value="${product.getProductid()}">
 <button type="submit" class="btn btn-success createAccount">Update Product</button>
-	
 </form>
 </div>
 </body>

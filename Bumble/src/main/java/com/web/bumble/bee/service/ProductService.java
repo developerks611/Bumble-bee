@@ -28,4 +28,8 @@ public class ProductService {
 		
 		return ProductDataBase.searchProduct(id);
 	}
+	
+	public boolean updateProduct(Product product) throws ClassNotFoundException, SQLException {
+		return ProductDataBase.updateProduct(product);
+	}
 }
