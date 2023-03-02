@@ -1,0 +1,6 @@
+127.0.0.1 - - [26/Feb/2023:10:04:41 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [26/Feb/2023:10:04:44 +0530] "GET /Bumble/user-login.jsp HTTP/1.1" 200 3802
+127.0.0.1 - - [26/Feb/2023:10:04:45 +0530] "GET /Bumble/css/navcss.css HTTP/1.1" 200 139
+127.0.0.1 - - [26/Feb/2023:10:04:55 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [26/Feb/2023:10:05:07 +0530] "GET /Bumble/customer-register.jsp HTTP/1.1" 200 5200
+127.0.0.1 - - [26/Feb/2023:10:05:12 +0530] "GET /Bumble/customer-register.jsp HTTP/1.1" 200 5200

@@ -1,0 +1,25 @@
+package com.web.bumble.bee.db;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.web.bumble.bee.model.Brand;
+import com.web.bumble.bee.model.Client;
+import com.web.bumble.bee.model.Login;
+
+public class BrandDataBase {
+	public static boolean addBrand(Brand brand) throws ClassNotFoundException, SQLException {
+		
+		DbConnector connector = new DbConnectorSQL();
+		Connection connection = connector.getConnection();
+		String query="INSERT INTO brand (brandid,brandname) Values (?,?)";
+		PreparedStatement ps = connection.prepareStatement(query);
+		ps.setInt(1, brand.getBrandid());
+		ps.setString(2, brand.getBrandname());
+		boolean result = ps.executeUpdate() > 0 ;
+		ps.close();
+		connection.close();
+		return result;
+	}
+}

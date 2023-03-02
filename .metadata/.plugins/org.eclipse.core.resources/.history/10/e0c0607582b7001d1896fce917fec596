@@ -1,0 +1,13 @@
+package com.web.bumble.bee.service;
+
+import com.web.bumble.bee.db.ProductDataBase;
+import com.web.bumble.bee.model.Brand;
+import com.web.bumble.bee.model.Category;
+import com.web.bumble.bee.model.Product;
+
+public class ProductService {
+	boolean addProduct(Product product,Brand brand,Category category) {
+		return ProductDataBase.addProduct(product, brand, category);
+		
+	}
+}

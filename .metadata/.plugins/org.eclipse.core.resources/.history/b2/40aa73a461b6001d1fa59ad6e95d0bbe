@@ -1,0 +1,13 @@
+package com.web.bumble.bee.model;
+
+public class User {
+	protected String username;
+	protected String password;
+	
+	
+	
+
+	
+	
+	
+}

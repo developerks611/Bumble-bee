@@ -1,0 +1,24 @@
+package com.web.bumble.bee.db;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.web.bumble.bee.model.Category;
+import com.web.bumble.bee.model.Client;
+
+public class CategoryDataBase {
+
+	public static boolean addCat(Category category) throws ClassNotFoundException, SQLException {
+		DbConnector connector = new DbConnectorSQL();
+		Connection connection = connector.getConnection();
+		String query="INSERT INTO client (categoryname) Values (?)";
+		PreparedStatement ps = connection.prepareStatement(query);
+		ps.setString(1, category.getCategoryname());
+		boolean result = ps.executeUpdate() > 0 ;
+		ps.close();
+		connection.close();
+		return result;
+		
+	}
+}

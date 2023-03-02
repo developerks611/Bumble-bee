@@ -1,0 +1,5 @@
+package com.web.bumble.bee.db;
+
+public class LoginDataBase {
+
+}

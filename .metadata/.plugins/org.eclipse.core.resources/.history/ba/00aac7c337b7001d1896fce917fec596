@@ -1,0 +1,14 @@
+package com.web.bumble.bee.service;
+
+import java.sql.SQLException;
+
+import com.web.bumble.bee.db.BrandDataBase;
+import com.web.bumble.bee.model.Brand;
+
+public class BrandService {
+	public boolean addBrand(Brand brand) throws ClassNotFoundException, SQLException {
+		
+		return BrandDataBase.addBrand(brand);
+		
+	}
+}

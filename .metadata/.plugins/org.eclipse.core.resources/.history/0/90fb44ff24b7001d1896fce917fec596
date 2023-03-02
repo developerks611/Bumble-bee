@@ -1,0 +1,7 @@
+package com.web.bumble.bee.model;
+
+public class Category {
+	
+	private int categoryid;
+	private String categoryname;
+}

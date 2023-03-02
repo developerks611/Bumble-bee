@@ -1,0 +1,16 @@
+package com.web.bumble.bee.model;
+
+public abstract class User {
+	private String username;
+	private String password;
+	
+	
+	public abstract void setUsername(String username);
+	public abstract void setPassword(String username);
+	
+	
+
+	
+	
+	
+}

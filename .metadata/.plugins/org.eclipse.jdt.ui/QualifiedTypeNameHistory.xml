@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.service.ClientService"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Client"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.ClentDatabase"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.LoginDataBase"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Login"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.BrandDataBase"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.service.BrandService"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.CategoryDataBase"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.service.CategoryService"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.ProductDataBase"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.service.ProductService"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Brand"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.controller.BrandController"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Category"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Product"/>
+</qualifiedTypeNameHistroy>

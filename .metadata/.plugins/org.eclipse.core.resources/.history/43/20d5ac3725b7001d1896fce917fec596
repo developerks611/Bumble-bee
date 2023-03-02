@@ -1,0 +1,6 @@
+package com.web.bumble.bee.model;
+
+public class Brand {
+	private int brandid;
+	private	String brandname;
+}

@@ -1,0 +1,9 @@
+package com.web.bumble.bee.model;
+
+public class Product {
+  private int productid;
+  private String productname;
+  private String prodcutdescription;
+  private Double price;
+  private int Quantity;
+}

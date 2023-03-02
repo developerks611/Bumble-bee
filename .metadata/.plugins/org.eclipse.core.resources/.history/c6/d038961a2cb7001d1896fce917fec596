@@ -1,0 +1,12 @@
+package com.web.bumble.bee.service;
+
+import com.web.bumble.bee.db.BrandDataBase;
+import com.web.bumble.bee.model.Brand;
+
+public class BrandService {
+	public boolean addBrand(Brand brand) {
+		
+		return BrandDataBase.addBrand(brand);
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.web.bumble.bee.service;
+
+public class BrandService {
+
+}

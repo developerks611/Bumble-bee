@@ -1,0 +1,12 @@
+package com.web.bumble.bee.db;
+
+import com.web.bumble.bee.model.Client;
+import com.web.bumble.bee.model.Login;
+
+public class BrandDataBase {
+	public static boolean addBrand(Brand brand) {
+		
+		
+		
+	}
+}

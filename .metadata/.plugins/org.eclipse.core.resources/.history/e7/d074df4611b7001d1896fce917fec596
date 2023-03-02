@@ -1,0 +1,12 @@
+package com.web.bumble.bee.service;
+
+import com.web.bumble.bee.db.LoginDataBase;
+import com.web.bumble.bee.model.Client;
+
+public class LoginService {
+	
+	boolean addcustomerLogin(Client client) {
+		
+		return LoginDataBase.addcustomerLogin(client);
+	}
+}

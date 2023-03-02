@@ -1,0 +1,14 @@
+package com.web.bumble.bee.service;
+
+import java.sql.SQLException;
+
+import com.web.bumble.bee.db.LoginDataBase;
+import com.web.bumble.bee.model.Client;
+
+public class LoginService {
+	
+	public void addcustomerLogin(Client client) throws ClassNotFoundException, SQLException {
+		
+		return LoginDataBase.addcustomerLogin(client);
+	}
+}

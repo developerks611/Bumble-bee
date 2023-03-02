@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+ <%@ taglib prefix = "tag" uri = "http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert Brand</title>
+<style>
+.container {
+ text-align:center;
+}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<p>${message }<p>
+		<form action="addBrand" method="post">
+			<input type="text" placeholder="Brand Name"><button type="submit" class="btn btn-success createAccount">Insert</button>
+			
+		
+		
+		
+		
+		</form>
+		
+	
+	
+	</div>
+	
+</body>
+</html>

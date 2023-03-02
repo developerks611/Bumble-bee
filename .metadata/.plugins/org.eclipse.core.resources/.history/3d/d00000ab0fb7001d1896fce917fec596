@@ -1,0 +1,19 @@
+package com.web.bumble.bee.db;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.web.bumble.bee.model.Client;
+
+public class LoginDataBase {
+	
+	public static boolean customerLogin(Client client) throws ClassNotFoundException, SQLException {
+		DbConnector connector = new DbConnectorSQL();
+		Connection connection = connector.getConnection();
+		String query="INSERT INTO client (rollid,email,password) Values (?,?,?,?,?,?)";
+		
+		return false;
+		
+		
+	}
+}

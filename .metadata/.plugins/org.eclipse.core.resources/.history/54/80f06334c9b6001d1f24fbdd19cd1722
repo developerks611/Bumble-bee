@@ -1,0 +1,18 @@
+package com.web.bumble.bee.model;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Convertor {
+ public SimpleDateFormat covertdate(String sDate1) throws ParseException {
+	 
+	 
+     Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);  
+     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+     return formatter.format(date1));  
+             
+ }
+	
+}
