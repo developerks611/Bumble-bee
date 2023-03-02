@@ -141,3 +141,8 @@
 127.0.0.1 - - [02/Mar/2023:12:49:12 +0530] "POST /Bumble/searchProduct HTTP/1.1" 200 1348
 127.0.0.1 - - [02/Mar/2023:12:49:18 +0530] "POST /Bumble/updateProduct HTTP/1.1" 302 -
 127.0.0.1 - - [02/Mar/2023:12:49:18 +0530] "GET /Bumble/searchProduct?action=getAllProduct HTTP/1.1" 200 2091
+127.0.0.1 - - [02/Mar/2023:14:07:34 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [02/Mar/2023:14:07:36 +0530] "GET /Bumble/searchProduct?action=getAllProduct HTTP/1.1" 200 2091
+127.0.0.1 - - [02/Mar/2023:14:07:39 +0530] "POST /Bumble/searchProduct HTTP/1.1" 200 1348
+127.0.0.1 - - [02/Mar/2023:14:07:49 +0530] "POST /Bumble/updateProduct HTTP/1.1" 302 -
+127.0.0.1 - - [02/Mar/2023:14:07:50 +0530] "GET /Bumble/searchProduct?action=getAllProduct HTTP/1.1" 200 2097
