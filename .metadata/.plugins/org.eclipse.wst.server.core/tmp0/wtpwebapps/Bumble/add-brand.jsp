@@ -27,6 +27,7 @@
     padding:5px;
     font-weight:bold;
 }
+
 .txt_input{
 
 	width:30%;
@@ -40,7 +41,7 @@
 </head>
 <body>
 	<div class="container">
-		<p>${message }<p>
+		<p>${message}<p>
 		<form action="addBrand" method="post">
 		<input type="hidden" name="action" value="addbrand">
 			<input type="text" class="txt_input" placeholder="Brand Name" name="brandname"><button type="submit" class="btn btn-success createAccount">Insert</button>

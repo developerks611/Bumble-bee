@@ -131,4 +131,6 @@ public static boolean updateProduct(Product product) throws ClassNotFoundExcepti
 	return result;
 	
 }
+
+
 }

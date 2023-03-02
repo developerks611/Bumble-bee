@@ -206,5 +206,6 @@ public class ProductsController extends HttpServlet {
 		response.sendRedirect("/Bumble/searchProduct?action=getAllProduct");
 		
 	}
+	
 
 }
