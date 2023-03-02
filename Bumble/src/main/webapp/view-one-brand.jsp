@@ -40,13 +40,17 @@
 </style>
 </head>
 <body>
+<p>${message}<p>
 	<div class="container">
 	<tag:set var = "brand" scope = "session" value = "${brand}"/>
 	
-		<p>${message}<p>
-		<form action="addBrand" method="post">
-		<input type="hidden" name="action" value="addbrand">
-			<input type="text" class="txt_input" placeholder="Brand Name" name="brandname" value="${brand.getBrandname()}"><button type="submit" class="btn btn-success createAccount" >Update</button>
+		
+		<form action="updateBrand" method="post">
+		
+			<input type="text" class="txt_input" placeholder="Brand Name" name="brandname" value="${brand.getBrandname()}">
+			<input type="hidden" class="txt_input"  name="bid" value="${brand.getBrandid()}">
+			<input type="hidden" name="action" value="updatebrand">
+			<button type="submit" class="btn btn-success createAccount" >Update</button>
 		</form>
 		
 	

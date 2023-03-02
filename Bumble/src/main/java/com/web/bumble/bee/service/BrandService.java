@@ -23,4 +23,9 @@ public class BrandService {
 		
 		return BrandDataBase.searchBrand(brand);
 	}
+	public boolean updateBrand(Brand brand) throws ClassNotFoundException, SQLException {
+		return BrandDataBase.updateBrand(brand);
+		
+		
+	}
 }

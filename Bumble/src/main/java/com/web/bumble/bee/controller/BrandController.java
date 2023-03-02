@@ -15,10 +15,12 @@ import com.web.bumble.bee.model.Category;
 import com.web.bumble.bee.model.Client;
 import com.web.bumble.bee.model.Convertor;
 import com.web.bumble.bee.model.Login;
+import com.web.bumble.bee.model.Product;
 import com.web.bumble.bee.service.BrandService;
 import com.web.bumble.bee.service.CategoryService;
 import com.web.bumble.bee.service.ClientService;
 import com.web.bumble.bee.service.LoginService;
+import com.web.bumble.bee.service.ProductService;
 
 /**
  * Servlet implementation class BrandController
@@ -47,6 +49,10 @@ public class BrandController extends HttpServlet {
 		}
 		else if(action.equals("searchbrand")) {
 			searchBrand(request, response);
+			
+		}
+		else if(action.equals("updatebrand")) {
+			updateBrand(request, response);
 			
 		}
 		
@@ -110,6 +116,31 @@ public class BrandController extends HttpServlet {
 		request.setAttribute("message", message);
 		RequestDispatcher rd=request.getRequestDispatcher("view-brand.jsp");
 		rd.forward(request, response);
+		
+	}
+	
+	
+	private void updateBrand(HttpServletRequest request, HttpServletResponse response) throws IOException  {
+		String message="";
+		BrandService service=new BrandService();
+		Brand brand=new Brand();
+		brand.setBrandid(Integer.parseInt(request.getParameter("bid")));
+		brand.setBrandname(request.getParameter("brandname"));
+		
+		try {
+			boolean result=service.updateBrand(brand);
+			
+			if(result) {
+				
+				message="Brand updated";
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			message=e.getMessage();
+		}
+		///Bumble/searchProduct?action=getAllProduct
+		request.setAttribute("message", message);
+		response.sendRedirect("/Bumble/viewBrand?action=allbrands");
 		
 	}
 	

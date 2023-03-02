@@ -12,6 +12,7 @@ import com.web.bumble.bee.model.Brand;
 import com.web.bumble.bee.model.Category;
 import com.web.bumble.bee.model.Client;
 import com.web.bumble.bee.model.Login;
+import com.web.bumble.bee.model.Product;
 
 public class BrandDataBase {
 	public static boolean addBrand(Brand brand) throws ClassNotFoundException, SQLException {
@@ -62,9 +63,22 @@ public class BrandDataBase {
 		 
 		 connection.close();
 		 return branddata;
-		
+	}
+	
+	public static boolean updateBrand(Brand brand) throws ClassNotFoundException, SQLException {
+		DbConnector connector =new DbConnectorSQL();
+		Connection connection = connector.getConnection();
+		String query = "UPDATE brand SET brandname=? WHERE brandid=?";
+		PreparedStatement ps = connection.prepareStatement(query);
+		ps.setString(1, brand.getBrandname());
+		ps.setInt(2, brand.getBrandid());
+		boolean result = ps.executeUpdate() > 0 ;
+		ps.close();
+		connection.close();
+		return result;
 		
 	}
+
 	
 	
 }
