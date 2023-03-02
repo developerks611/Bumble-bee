@@ -6937,3 +6937,7 @@
 2023-03-02 09:47:01,827 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory T:\softwares pro\Bumble bee\Bumble\src\main\resources
 2023-03-02 09:47:01,831 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-03-02 09:47:01,832 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory T:\softwares pro\Bumble bee\Bumble\src\test\resources
+2023-03-02 10:07:01,746 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-02 10:07:01,746 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory T:\softwares pro\Bumble bee\Bumble\src\main\resources
+2023-03-02 10:07:01,776 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-02 10:07:01,776 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory T:\softwares pro\Bumble bee\Bumble\src\test\resources

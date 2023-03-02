@@ -46,9 +46,10 @@ public class ProductsController extends HttpServlet {
 			
 			delete(request, response);
 		}
-		
-		
-	}
+		else if(action.equals("searchproducts")) {
+			searchbyid(request, response);
+		}
+		}
 	
 	private void addProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -139,7 +140,7 @@ public class ProductsController extends HttpServlet {
 		Product  product=new Product();
 		product.setProductid(Integer.parseInt(request.getParameter("pid")));
 		try {
-			boolean Result=service.deleteDriver(product);
+			boolean Result=service.deleteProduct(product);
 			if(Result) {
 				message="Product Deleted";
 				
@@ -150,6 +151,27 @@ public class ProductsController extends HttpServlet {
 		request.setAttribute("message", message);
 		response.sendRedirect("/Bumble/searchProduct?action=getAllProduct");
 		//Bumble/searchProduct?action=getAllProduct
+	}
+	
+	private void searchbyid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
+		String message= "";
+		ProductService service=new ProductService();
+		Product  product=new Product();
+		product.setProductid(Integer.parseInt(request.getParameter("pid")));
+		try {
+			product=service.searchProduct(product);
+			if(product==null) {
+				
+				
+			}
+			request.setAttribute("product",product);
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			message=e.getMessage();
+		}
+		request.setAttribute("message",message);
+		RequestDispatcher rd=request.getRequestDispatcher("view-one-product.jsp"); 
+		rd.forward(request, response);
 	}
 
 }

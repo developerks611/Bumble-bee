@@ -80,7 +80,7 @@ public class ProductDataBase {
 		
 	}
 	
-	public static boolean deleteDriver(Product id) throws ClassNotFoundException, SQLException {
+	public static boolean deleteProduct(Product id) throws ClassNotFoundException, SQLException {
 	 	DbConnector connector =new DbConnectorSQL();
 		Connection connection = connector.getConnection();
 		
@@ -91,6 +91,27 @@ public class ProductDataBase {
 		ps.close();
 		connection.close();
 		return result;
+	 
+ }
+	
+	public static Product searchProduct(Product id) throws ClassNotFoundException, SQLException {
+		 DbConnector connector = new DbConnectorSQL();
+		 Connection connection = connector.getConnection();
+		 String query = "SELECT * FROM product where productid=?";
+		 PreparedStatement ps=connection.prepareStatement(query);
+		 ps.setInt(1, id.getProductid());
+		 ResultSet rs=ps.executeQuery();
+		 Product product=new Product();
+		 if(rs.next()) {
+			 Product productreturn=
+		 new Product(rs.getInt("productid"),rs.getString("productname"),
+				 rs.getString("productdescription"),rs.getDouble("productprice"),rs.getInt("quantity"));
+
+			 product=productreturn;
+		 }
+		 
+		 connection.close();
+		 return product;
 	 
  }
 }

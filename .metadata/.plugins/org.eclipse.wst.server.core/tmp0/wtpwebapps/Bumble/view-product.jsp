@@ -56,13 +56,15 @@ background-color:orange;
     <td>${product.getQuantity()}</td>
    
     <td>
-    <form>
-    
+    <form action="searchProduct" method="Post">
+     <input type="hidden" name="pid" value="${product.getProductid()}">
+    <input type="hidden" name="action" value="searchproducts">
     <button type="submit" class="btn btn-success createAccount">View</button></form>
     </td>
     
     <td><form action="deleteProduct" method="Post">
-    <inputt type="hidden" name="pid" value="${product.getProductid()}">
+   
+    <input type="hidden" name="pid" value="${product.getProductid()}">
     <input type="hidden" name="action" value="deleteproducts">
     <button type="submit" class="btn btn-success createAccount">Delete</button>
     </form></td>
@@ -72,4 +74,4 @@ background-color:orange;
 </table>
 
 </body>
-</html
+</html>

@@ -20,8 +20,12 @@ public class ProductService {
 		return ProductDataBase.getAllProduct();
 	}
 	
-	public boolean deleteDriver(Product id) throws ClassNotFoundException, SQLException {
+	public boolean deleteProduct(Product id) throws ClassNotFoundException, SQLException {
 		
-		return ProductDataBase.deleteDriver(id);
+		return ProductDataBase.deleteProduct(id);
+	}
+	public Product searchProduct(Product id) throws ClassNotFoundException, SQLException {
+		
+		return ProductDataBase.searchProduct(id);
 	}
 }
