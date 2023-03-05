@@ -1,5 +1,6 @@
 package com.web.bumble.bee.db;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,10 +21,13 @@ public class ProductDataBase {
 		
 		DbConnector connector = new DbConnectorSQL();
 		Connection connection = connector.getConnection();
+		
 		String query="INSERT INTO product "
 				+ "(brandid,productname,productprice,productdescription,quantity,categoryid)"
 				+ " Values (?,?,?,?,?,?)";
-		PreparedStatement ps = connection.prepareStatement(query);
+		
+		String query1="{call addProducts(?, ?, ?, ?, ?,?)}";
+		CallableStatement  ps = connection.prepareCall(query1);
 		ps.setInt(1, brand.getBrandid());
 		ps.setString(2, product.getProductname());
 		ps.setDouble(3, product.getPrice());
@@ -42,8 +46,8 @@ public class ProductDataBase {
 	public static List<Product> getAllProduct() throws ClassNotFoundException, SQLException {
 		DbConnector connector = new DbConnectorSQL();
 		 Connection connection = connector.getConnection();
-		 String query = "SELECT productid,productname,productprice,productdescription,quantity FROM product";
-		 Statement st=connection.createStatement();
+		 String query = "{call selectProduct()}";
+		 CallableStatement st=connection.prepareCall(query);
 		 ResultSet rs=st.executeQuery(query);
 		 List<Product>productlist=new ArrayList();
 		 while(rs.next()) {
@@ -84,8 +88,8 @@ public class ProductDataBase {
 	 	DbConnector connector =new DbConnectorSQL();
 		Connection connection = connector.getConnection();
 		
-		String query = "DELETE FROM product WHERE productid=?";
-		PreparedStatement ps = connection.prepareStatement(query);
+		String query = "{call deleteProduct(?)}";
+		CallableStatement ps = connection.prepareCall(query);
 		ps.setInt(1,id.getProductid() );
 		boolean result = ps.executeUpdate() > 0 ;
 		ps.close();
@@ -97,8 +101,8 @@ public class ProductDataBase {
 	public static Product searchProduct(Product id) throws ClassNotFoundException, SQLException {
 		 DbConnector connector = new DbConnectorSQL();
 		 Connection connection = connector.getConnection();
-		 String query = "SELECT * FROM product where productid=?";
-		 PreparedStatement ps=connection.prepareStatement(query);
+		 String query ="{call searchProduct(?)}";//select * from product where productid=?
+		 CallableStatement ps=connection.prepareCall(query);
 		 ps.setInt(1, id.getProductid());
 		 ResultSet rs=ps.executeQuery();
 		 Product product=new Product();
@@ -118,8 +122,8 @@ public class ProductDataBase {
 public static boolean updateProduct(Product product) throws ClassNotFoundException, SQLException {
 	DbConnector connector =new DbConnectorSQL();
 	Connection connection = connector.getConnection();
-	String query = "UPDATE product SET productname=?,productprice=?,productdescription=?,quantity=? WHERE productid=?";
-	PreparedStatement ps = connection.prepareStatement(query);
+	String query = "call updateProducts(?,?,?,?,?)";
+	CallableStatement ps = connection.prepareCall(query);
 	ps.setString(1, product.getProductname());
 	ps.setDouble(2, product.getPrice());
 	ps.setString(3, product.getProdcutdescription());

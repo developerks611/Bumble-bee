@@ -1,0 +1,71 @@
+package com.web.bumble.bee.model;
+
+public class Loan {
+ private int loanid;
+ private String customer;
+ private int product;
+ private double loanamount;
+ private double usedamount;
+ private int installment;
+ private String loanstatus;
+public Loan() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Loan(int loanid, String customer, int product, double loanamount, double usedamount, int installment,
+		String loanstatus) {
+	super();
+	this.loanid = loanid;
+	this.customer = customer;
+	this.product = product;
+	this.loanamount = loanamount;
+	this.usedamount = usedamount;
+	this.installment = installment;
+	this.loanstatus = loanstatus;
+}
+public int getLoanid() {
+	return loanid;
+}
+public void setLoanid(int loanid) {
+	this.loanid = loanid;
+}
+public String getCustomer() {
+	return customer;
+}
+public void setCustomer(String customer) {
+	this.customer = customer;
+}
+public int getProduct() {
+	return product;
+}
+public void setProduct(int product) {
+	this.product = product;
+}
+public double getLoanamount() {
+	return loanamount;
+}
+public void setLoanamount(double loanamount) {
+	this.loanamount = loanamount;
+}
+public double getUsedamount() {
+	return usedamount;
+}
+public void setUsedamount(double usedamount) {
+	this.usedamount = usedamount;
+}
+public int getInstallment() {
+	return installment;
+}
+public void setInstallment(int installment) {
+	this.installment = installment;
+}
+public String getLoanstatus() {
+	return loanstatus;
+}
+public void setLoanstatus(String loanstatus) {
+	this.loanstatus = loanstatus;
+}
+
+ 
+// /loanid,customerid,productid,loanamount,usedamount,installment,loanstatus
+}

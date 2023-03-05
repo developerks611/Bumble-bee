@@ -1,0 +1,17 @@
+package com.web.bumble.bee.model;
+
+public class Loan {
+ private int loanid;
+ private Client customer;
+ private int product;
+ private double loanamount;
+ private double usedamount;
+ private int installment;
+ private String loanstatus;
+public Loan() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+// /loanid,customerid,productid,loanamount,usedamount,installment,loanstatus
+}

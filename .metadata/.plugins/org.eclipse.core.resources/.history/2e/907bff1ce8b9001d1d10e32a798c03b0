@@ -1,0 +1,10 @@
+package com.web.bumble.bee.service;
+
+import com.web.bumble.bee.model.Loan;
+
+
+	public boolean addLoan(Loan loan) {
+		
+		
+	}
+}

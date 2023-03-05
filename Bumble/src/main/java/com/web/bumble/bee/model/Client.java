@@ -1,10 +1,9 @@
 package com.web.bumble.bee.model;
 
-import java.time.LocalDate;
 
 public class Client extends User {
 	
-	private int customerid;
+	
 	private String fname;
 	private String lname;
 	private String dob;
@@ -18,12 +17,18 @@ public class Client extends User {
 		super(email, password);
 		// TODO Auto-generated constructor stub
 	}
-	public int getCustomerid() {
-		return customerid;
+	
+	
+	public Client(String email, String password, int customerid, String fname, String lname, String dob, String adress,
+			String nic) {
+		super(email, password);
+		this.fname = fname;
+		this.lname = lname;
+		this.dob = dob;
+		this.adress = adress;
+		this.nic = nic;
 	}
-	public void setCustomerid(int customerid) {
-		this.customerid = customerid;
-	}
+	
 	public String getFname() {
 		return fname;
 	}
@@ -54,6 +59,7 @@ public class Client extends User {
 	public void setNic(String nic) {
 		this.nic = nic;
 	}
+	
 	
 	
 }

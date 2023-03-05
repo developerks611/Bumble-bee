@@ -17,7 +17,7 @@ public class CategoryDataBase {
 	public static boolean addCat(Category category) throws ClassNotFoundException, SQLException {
 		DbConnector connector = new DbConnectorSQL();
 		Connection connection = connector.getConnection();
-		String query="INSERT INTO category (categoryname) Values (?)";
+		String query="call addCategory(?)";
 		PreparedStatement ps = connection.prepareStatement(query);
 		ps.setString(1, category.getCategoryname());
 		boolean result = ps.executeUpdate() > 0 ;

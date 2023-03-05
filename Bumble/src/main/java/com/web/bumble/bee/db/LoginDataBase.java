@@ -12,17 +12,14 @@ public class LoginDataBase {
 	public static boolean addcustomerLogin(Client client,Login lg) throws ClassNotFoundException, SQLException {
 		DbConnector connector = new DbConnectorSQL();
 		Connection connection = connector.getConnection();
-		String query="INSERT INTO login (rollid,email,password) Values (?,?,?)";
+		String query="call addLogin (?,?,?)";
 		PreparedStatement ps = connection.prepareStatement(query);
 		ps.setInt(1, lg.getRollid());
 		ps.setString(2, client.getEmail());
-		ps.setString(3, client.getEmail());
+		ps.setString(3, client.getPassword());
 		boolean result = ps.executeUpdate() > 0 ;
 		ps.close();
 		connection.close();
 		return result;
-	
-		
-		
 	}
 }

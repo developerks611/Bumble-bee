@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>com.web.bumble.bee.controller.ProductsController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoanController</servlet-name>
+  	<display-name>LoanController</display-name>
+  	<description></description>
+  	<servlet-class>com.web.bumble.bee.controller.LoanController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ClientController</servlet-name>
   	<url-pattern>/ClientController</url-pattern>
@@ -123,5 +129,25 @@
   <servlet-mapping>
   	<servlet-name>ProductsController</servlet-name>
   	<url-pattern>/searchProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/addLoan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/updateLoan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/viewLoan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/searchLoan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/deleteLoan</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -71,7 +71,13 @@ nav a {
     font-weight:bold;
 }
 
+.msg{
+	color:red;
+	
+	font-weight:bold;
+	
 
+}
  /* 
   Extra small devices (phones, 600px and down) 
 */
@@ -95,11 +101,12 @@ nav a {
 <body>
 <jsp:include page="navbar.jsp" />
 <div  class="container">
-<p>${message }<p>
+<div id="msg" class="msg"></div>
+<p class="msg">${message }<p>
 <form action="addData" method="post">
 <input type="text" name="fname" placeholder="First Name" required class="txt_input"><br>
 <input type="text" name="lname" placeholder="Last Name" required class="txt_input"><br>
-<input type="date" name="dob" required class="txt_input"><br>
+<input type="date" name="dob" required class="txt_input" id="dob" onChange="ageCalculator()"><br>
 <textarea placeholder="Address" required name="adress" required class="txt_input"></textarea ><br>
 <input type="text" name="nic" placeholder="Nic" required class="txt_input"><br>
 <input type="email" name="email" placeholder="Email" required class="txt_input"><br>
@@ -109,5 +116,39 @@ nav a {
 
 </form>
 </div>
+<script>  
+function ageCalculator() {  
+    var userinput = document.getElementById("dob").value;  
+    var dob = new Date(userinput);  
+ 
+      
+    //calculate month difference from current date in time  
+    var month_diff = Date.now() - dob.getTime();  
+      
+    //convert the calculated difference in date format  
+    var age_dt = new Date(month_diff);   
+      
+    //extract year from date      
+    var year = age_dt.getUTCFullYear();  
+      
+    //now calculate the age of the user  
+    var age = Math.abs(year - 1970);  
+    
+    if(age>=18){
+    
+
+    }
+    else{
+        
+       document.getElementById("dob").value = "";
+       document.getElementById("msg").innerHTML = "*** Sorry Age not enough ***";
+         
+    }
+
+    //display the calculated age  
+    
+    
+}  
+</script> 
 </body>
 </html>

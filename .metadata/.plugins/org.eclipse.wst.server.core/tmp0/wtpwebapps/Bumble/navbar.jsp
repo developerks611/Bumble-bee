@@ -53,14 +53,6 @@ nav a {
     <li><a href="#">About</a></li>
   </ul>
 </nav><br>
-<tag:set var = "brand" scope = "session" value = "${brand}"/>
 
-<tag:if test="${brand!=null}">
-	<p>${brand.getBrandname()}</p>
-	
-</tag:if>
-<tag:if test="${brand==null}">
-<p>No</p>
-</tag:if>
 </body>
 </html>

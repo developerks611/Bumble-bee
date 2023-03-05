@@ -1,0 +1,13 @@
+package com.web.bumble.bee.service;
+
+import java.sql.SQLException;
+
+import com.web.bumble.bee.db.LoanDataBase;
+import com.web.bumble.bee.model.Loan;
+
+public class LoanService {
+	public boolean addLoan(Loan loan) throws ClassNotFoundException, SQLException{
+		
+		return LoanDataBase.addLoan(loan);
+	}
+}

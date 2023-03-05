@@ -40,6 +40,7 @@
 <title>Insert Product</title>
 </head>
 <body>
+<jsp:include page="product-nav.jsp" />
 <div class="container">
 <p>${message}</p>
 <form action="addProduct" method="Post">

@@ -35,6 +35,7 @@ background-color:orange;
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="product-nav.jsp" />
 <p>${message}</p>
  <table>
   <tr>

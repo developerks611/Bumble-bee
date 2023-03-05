@@ -1,0 +1,11 @@
+package com.web.bumble.bee.service;
+
+import com.web.bumble.bee.db.LoanDataBase;
+import com.web.bumble.bee.model.Loan;
+
+public class LoanService {
+	public boolean addLoan(Loan loan){
+		
+		return LoanDataBase.addLoan(loan);
+	}
+}
