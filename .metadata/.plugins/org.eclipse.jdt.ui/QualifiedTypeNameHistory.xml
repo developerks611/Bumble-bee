@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="com.web.bumble.bee.model.Client"/>
     <fullyQualifiedTypeName name="com.web.bumble.bee.db.ClentDatabase"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
@@ -30,6 +29,10 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.web.bumble.bee.model.Category"/>
     <fullyQualifiedTypeName name="com.web.bumble.bee.model.Product"/>
-    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
     <fullyQualifiedTypeName name="java.sql.DatabaseMetaData"/>
+    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.db.AdminDataBase"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.service.AdminService"/>
+    <fullyQualifiedTypeName name="com.web.bumble.bee.model.Admin"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

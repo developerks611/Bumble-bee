@@ -46,6 +46,12 @@
   	<description></description>
   	<servlet-class>com.web.bumble.bee.controller.LoanController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AdminController</servlet-name>
+  	<display-name>AdminController</display-name>
+  	<description></description>
+  	<servlet-class>com.web.bumble.bee.controller.AdminController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ClientController</servlet-name>
   	<url-pattern>/ClientController</url-pattern>
@@ -149,5 +155,17 @@
   <servlet-mapping>
   	<servlet-name>LoanController</servlet-name>
   	<url-pattern>/deleteLoan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminController</servlet-name>
+  	<url-pattern>/adLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminController</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminController</servlet-name>
+  	<url-pattern>/viewAdmin</url-pattern>
   </servlet-mapping>
 </web-app>

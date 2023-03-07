@@ -35,6 +35,7 @@ background-color:orange;
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="customer-nav.jsp" />
 <p>${message}</p>
  <table>
   <tr>
@@ -46,7 +47,7 @@ background-color:orange;
     <th>Used Amount</th>
     <th>Installment Plan</th>
     <th>Loan Status</th>
-    <th colspan="2">Action</th>
+   
   </tr>
 
   <tag:forEach var="loan" items="${loanlist}">
@@ -61,19 +62,6 @@ background-color:orange;
     <td>${loan.getUsedamount()}</td>
     <td>${loan.getLoanstatus()}</td>
    
-    <td>
-    <form action="searchProduct" method="Post">
-     <input type="hidden" name="pid" value="${product.getProductid()}">
-    <input type="hidden" name="action" value="searchproducts">
-    <button type="submit" class="btn btn-success createAccount">View</button></form>
-    </td>
-    
-    <td><form action="deleteProduct" method="Post">
-   
-    <input type="hidden" name="pid" value="${product.getProductid()}">
-    <input type="hidden" name="action" value="deleteproducts">
-    <button type="submit" class="btn btn-success createAccount">Delete</button>
-    </form></td>
   
  </tag:forEach>
 

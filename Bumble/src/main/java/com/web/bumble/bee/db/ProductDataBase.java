@@ -21,13 +21,9 @@ public class ProductDataBase {
 		
 		DbConnector connector = new DbConnectorSQL();
 		Connection connection = connector.getConnection();
-		
-		String query="INSERT INTO product "
-				+ "(brandid,productname,productprice,productdescription,quantity,categoryid)"
-				+ " Values (?,?,?,?,?,?)";
-		
-		String query1="{call addProducts(?, ?, ?, ?, ?,?)}";
-		CallableStatement  ps = connection.prepareCall(query1);
+	
+		String query="{call addProducts(?, ?, ?, ?, ?,?)}";
+		CallableStatement  ps = connection.prepareCall(query);
 		ps.setInt(1, brand.getBrandid());
 		ps.setString(2, product.getProductname());
 		ps.setDouble(3, product.getPrice());

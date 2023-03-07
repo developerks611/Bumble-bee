@@ -40,6 +40,8 @@
 </style>
 </head>
 <body>
+
+<jsp:include page="brand-nav.jsp" />
 <p>${message}<p>
 	<div class="container">
 	<tag:set var = "brand" scope = "session" value = "${brand}"/>

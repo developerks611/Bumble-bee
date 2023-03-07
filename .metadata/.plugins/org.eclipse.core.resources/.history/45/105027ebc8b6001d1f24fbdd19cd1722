@@ -1,8 +1,0 @@
-package com.web.bumble.bee.model;
-
-import java.time.LocalDate;
-
-public class Convertor {
-	LocalDate date;
-	
-}

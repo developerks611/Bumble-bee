@@ -39,6 +39,8 @@
 </style>
 </head>
 <body>
+
+<jsp:include page="categ-nav.jsp" />
 	<div class="container">
 		<p>${message }<p>
 		<form action="addCat" method="post">

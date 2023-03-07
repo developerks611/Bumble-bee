@@ -40,6 +40,13 @@
 </style>
 </head>
 <body>
+<jsp:include page="brand-nav.jsp" />
+<%
+if((String) session.getAttribute("user")==null){
+	
+	response.sendRedirect("admin-login.jsp");
+}
+%>
 	<div class="container">
 		<p>${message}<p>
 		<form action="addBrand" method="post">

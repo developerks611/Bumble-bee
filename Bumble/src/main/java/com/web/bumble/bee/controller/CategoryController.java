@@ -2,6 +2,7 @@ package com.web.bumble.bee.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.web.bumble.bee.model.Brand;
 import com.web.bumble.bee.model.Category;
+import com.web.bumble.bee.service.BrandService;
 import com.web.bumble.bee.service.CategoryService;
 
 /**
@@ -21,10 +24,11 @@ public class CategoryController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action=request.getParameter("action");
-	    if(action.equals("searchcat")) {
-			
-			searchCategory(request, response);
-		}
+	   
+	   if(action.equals("viewallcat")) {
+	    	
+	    	viewAllcat(request, response);
+	    }
 	}
 
 
@@ -35,6 +39,11 @@ public class CategoryController extends HttpServlet {
 			
 			
 		}
+		else if(action.equals("categorysearch")) {
+				
+				searchCategory(request, response);
+			}
+		    
 	
 		
 	}
@@ -62,18 +71,47 @@ public class CategoryController extends HttpServlet {
 		Category category=new Category();
 		String message= "";
 		
-		//category.setCategoryid(Integer.parseInt(request.getParameter("categoryid")));
-		  category.setCategoryid(133);
+		category.setCategoryid(Integer.parseInt(request.getParameter("cid")));
+		 
 		try {
 			category=service.searchCategory(category);
+			if(category==null) {
+				
+			}
+			
 			request.setAttribute("category", category);
+			
+			
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			
 			message=e.getMessage();
 		}
 		
 		request.setAttribute("message", message);
-		RequestDispatcher rd=request.getRequestDispatcher("navbar.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("view-one-category.jsp");
 		rd.forward(request, response);
+	}
+	
+	private void viewAllcat(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		CategoryService service=new CategoryService();
+		String message= "";
+		try {
+			List<Category>catlist=service.getAllCat();
+			if(catlist.isEmpty()) {
+				message="Empty category List";
+				
+			}
+			request.setAttribute("catlist", catlist);
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			message=e.getMessage();
+		}
+		
+		request.setAttribute("message", message);
+		RequestDispatcher rd=request.getRequestDispatcher("view-cat.jsp");
+		rd.forward(request, response);
+		
 	}
 }

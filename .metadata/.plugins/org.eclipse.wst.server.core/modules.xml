@@ -2,4 +2,5 @@
 <modules>
   <module moduleId="org.eclipse.jst.j2ee.server:Bumble" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.j2ee.server:com.web.bumble.bee" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:com.loan.bumble" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

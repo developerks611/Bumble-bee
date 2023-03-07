@@ -25,12 +25,18 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.loan.web"/>
+			<item value="com.loan.app"/>
 			<item value="com.bumble.bee"/>
 		</list>
 		<list key="groupId">
+			<item value="loan-web"/>
+			<item value="com.loan.bumble"/>
 			<item value="com.web.bumble.bee"/>
 		</list>
 		<list key="artifactId">
+			<item value="loan-web"/>
+			<item value="com.loan.bumble"/>
 			<item value="com.web.bumble.bee"/>
 		</list>
 		<list key="projectNameTemplate">
